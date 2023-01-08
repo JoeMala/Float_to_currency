@@ -1,4 +1,4 @@
-def number_to_currency():    
+def float_to_currency():    
     #runs function check_input() created at the bottom that ensures input is numeric.
     user_Input = check_input()
 
@@ -153,4 +153,4 @@ def which_currency():
                        
 
 #running main fuction    
-number_to_currency()
+float_to_currency()
