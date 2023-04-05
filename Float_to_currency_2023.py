@@ -134,7 +134,20 @@ def which_currency():
             currency = int(input())
             if currency in (1,2,3,4,5):
                 not_ok = False
-                match currency:
+                if currency == 1:
+                    return '$'
+                if currency == 2:
+                    return '€'
+                if currency == 3:
+                    return '¥'
+                if currency == 4:
+                    return '£'
+                if currency == 5:
+                    return '¥'
+                """
+                 For Python 10 and later the commented out block below can be replaced with all the if statements preceding this comment.
+                 
+                 match currency:
                     case 1:
                         return '$'
                     case 2:
@@ -145,12 +158,14 @@ def which_currency():
                         return '£'
                     case 5:
                         return '¥'
+                  """
+                         
             else:
                 print('Please enter a number one through five.')
             
         except ValueError:
             print("Please enter a number one through five.")
                        
-
-#running main fuction    
-float_to_currency()
+   
+if __name__== "__main__":
+    float_to_currency()
